@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\BasketProduct */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Basket Products', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Продукты в корзине', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="basket-product-view">
@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Вы точно хотите удалить?',
+                'confirm' => 'Вы уверены что хотите удалить?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -29,7 +29,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'user_id',
+            [
+                'attribute' => 'user_id',
+                'value' => function ($model) {
+                    return $model->ads();
+                },
+            ],
             'product_id',
             'count',
         ],
