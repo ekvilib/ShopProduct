@@ -85,6 +85,10 @@ class BasketProduct extends \yii\db\ActiveRecord
     {
         return Product::findOne($this->product_id)->name;
     }
+    public function ololol()
+    {
+        return Product::findOne($this->product_id)->name;
+    }
 
     public function ads()
     {

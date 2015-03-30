@@ -27,6 +27,11 @@ class Basket extends Model
 		return $price;
 	}
 
+    public function ololol()
+    {
+        return Product::findOne($this->product_id)->name;
+    }
+
 	public function getProducts()
 	{
 		return BasketProduct::find()

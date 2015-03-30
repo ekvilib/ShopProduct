@@ -30,7 +30,7 @@ $this->title = 'Корзина';
 	<?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
 		<div class="alert alert-success">
-            Благодарим Вас за обращение к нам. Мы ответим вам как можно скорее.
+            Благодарим Вас за покупку. Ваш заказ принят к обработке.
 		</div>
 
 		<p>

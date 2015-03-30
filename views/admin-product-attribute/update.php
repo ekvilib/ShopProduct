@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\ProductAttribute */
 
-$this->title = 'Обновить атрибут продуктов: ' . ' ' . $model->id;
+$this->title = 'Редактирование атрибут продуктов: ' . ' ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Product Attributes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Обновить';

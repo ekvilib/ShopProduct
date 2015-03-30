@@ -29,12 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            [
-                'attribute' => 'product_id',
-                'value' => function ($model) {
-                    return $model->productName;
-                },
-            ],
+            'product_id',
             'type_id',
             'value',
         ],

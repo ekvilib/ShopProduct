@@ -65,4 +65,9 @@ class BasketProductSearch extends BasketProduct
 
         return $dataProvider;
     }
+
+    public function ololol()
+    {
+        return Product::findOne($this->product_id)->name;
+    }
 }
