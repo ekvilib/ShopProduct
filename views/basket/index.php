@@ -16,7 +16,7 @@ $this->title = 'Корзина';
 					<h2><?php echo $basketProduct->product->name; ?></h2>
 					<div class="badge badge-inverse">Стоимость итого: <?php echo $basketProduct->product->price * $basketProduct->count; ?></div>
 					<?php echo $basketProduct->product->description; ?>
-					<div>Количество: <?php echo $basketProduct->count; ?></div>
+					<div>33Количество: <?php echo $basketProduct->count; ?></div>
                     <?= Html::a('Добавить', ['basket/add', 'id' => $basketProduct->id], ['class' => 'btn btn-success']) ?>
                     <?= Html::a('Убрать', ['basket/remove', 'id' => $basketProduct->id], ['class' => 'btn btn-danger']) ?>
 				</div>
