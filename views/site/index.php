@@ -10,13 +10,15 @@ $this->title = 'My Yii Application';
                 <?php if($category->parent_id == null): ?>
                     <div class="row" style="padding-top: 30px;">
                         <div class="col-md-12">
-                            <a href="<?php echo Yii::$app->urlManager->createUrl(['category', 'id' => $category->id]); ?>"><h4><?php echo $category->name; ?></h4></a>
+                            <a onClick="subcategory(<?php echo $category->id; ?>)"><h4><?php echo $category->name; ?></h4></a>
 
-                            <?php foreach($category->subcategories as $subcategory): ?>
-                                <div class="">
-                                    <a href="<?php echo Yii::$app->urlManager->createUrl(['category', 'id' => $subcategory->id]); ?>"><?php echo $subcategory->name; ?></a>
-                                </div>
-                            <?php endforeach; ?>
+                            <div style='display: none;' id="subcategory-<?php echo $category->id; ?>">
+                                <?php foreach($category->subcategories as $subcategory): ?>
+                                    <div class="">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['category', 'id' => $subcategory->id]); ?>"><?php echo $subcategory->name; ?></a>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
 
                         </div>
                     </div>

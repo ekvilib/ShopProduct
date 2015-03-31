@@ -9,7 +9,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        Адрес:<br/>
+        <span class="adress">Адрес:</span><br/>
         Телефон:<br/>
 
         Наш магазин работает с 08:00 до 20:00 <br/>

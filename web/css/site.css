@@ -12,7 +12,6 @@ body {
 
 .navbar-nav > li > a:hover {
     background: transparent;
-    font-weight: bold;
 }
 
 .myimage{
@@ -97,4 +96,8 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+
+.adress {
+    font-size: 20px;
 }

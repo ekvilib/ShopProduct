@@ -20,7 +20,9 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body background="../images/46.png">>
+<body background="../images/46.png">
+
+<h5><div id="time"></div></h5>
 
 <?php $this->beginBody() ?>
     <div class="wrap">
