@@ -44,6 +44,12 @@ body {
     font-style: italic;
 }
 
+.rowcategory {
+   text-decoration-line: underline;
+}
+
+
+
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
     position: relative;
@@ -99,5 +105,45 @@ a.desc:after {
 }
 
 .adress {
-    font-size: 20px;
+
+    padding-left: 200px;
+    font-size: 35px;
+}
+
+.fone {
+
+     padding-left: 300px;
+     font-size: 25px;
+     color: #d58512;
+ }
+.worck{
+
+    padding-left: 130px;
+    font-size: 15px;
+    color: deepskyblue;
+}
+.queue{
+
+    padding-left: 340px;
+    font-size: 15px;
+    color: red;
+}
+
+.alert-success{
+    background-color: #F7ECEE;
+    color: #3C76B6;
+}
+
+.badge
+{
+    background-color: #76A;
+}
+
+.lera_2
+{
+    border: 2px solid #EDD4F9;
+    background-color: #F0E7F0;
+}
+.breadcrumb {
+    background-color: #F4DCDC;
 }

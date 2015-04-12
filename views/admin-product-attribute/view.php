@@ -31,12 +31,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
 
             [
-                'attribute' => 'product_id',
-                'value' => function ($model) {
-                    return $model->ololol();
-                },
+            'label' => 'Продукт',
+            'value' => $model->productName,
             ],
-            'type_id',
+            [
+                'label' => 'Тип',
+                'value' => $model->typeName,
+            ],
             'value',
         ],
     ]) ?>

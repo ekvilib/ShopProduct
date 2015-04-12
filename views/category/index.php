@@ -14,9 +14,11 @@ $this->title = 'Категории';
 					<div class="badge badge-inverse">Стоимость: <?php echo $product->price; ?></div>
                     <?php echo $product->description; ?>
 
-                    <div>
+                    <div class="lera_2">
                         <?php foreach($product->attributes as $attribute): ?>
+                        <div class="">
                             <?php echo $attribute->name; ?>: <?php echo $attribute->value; ?>
+                        </div>
                         <?php endforeach; ?>
                     </div>
 

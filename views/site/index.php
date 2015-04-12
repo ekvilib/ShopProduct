@@ -8,7 +8,7 @@ $this->title = 'My Yii Application';
         <div class="col-md-4">
             <?php foreach($categories as $category): ?>
                 <?php if($category->parent_id == null): ?>
-                    <div class="row" style="padding-top: 30px;">
+                    <div class="row rowcategory" >
                         <div class="col-md-12">
                             <a onClick="subcategory(<?php echo $category->id; ?>)"><h4><?php echo $category->name; ?></h4></a>
 

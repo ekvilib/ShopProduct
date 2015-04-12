@@ -66,6 +66,14 @@ class ProductAttribute extends \yii\db\ActiveRecord
             ])->one()->name;
     }
 
+    public function getTypeName()
+    {
+        return ProductAttributeType::find()
+            ->where([
+                'id' => $this->type_id
+            ])->one()->name;
+    }
+
     public function ololol()
     {
         return Product::find()
