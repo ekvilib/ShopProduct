@@ -12,11 +12,10 @@ body {
 
 .navbar-nav > li > a:hover {
     background: transparent;
-    font-weight: bold;
 }
 
 .myimage{
-    background: url("../images/46.png") repeat;
+    background: url("../images/bgtopmenu.png") repeat;
 }
 
 .wrap > .container {
@@ -25,7 +24,7 @@ body {
 
 .footer {
     height: 60px;
-    background-color: #f5f5f5;
+    background: url("../images/334.png") repeat;
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
@@ -44,6 +43,12 @@ body {
     color: #c55;
     font-style: italic;
 }
+
+.rowcategory {
+   text-decoration-line: underline;
+}
+
+
 
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
@@ -68,7 +73,11 @@ a.desc:after {
 .sort-numerical a.asc:after {
     content: "\e153";
 }
-
+a{
+    font-size: 150%;
+    color:#000;
+    text-decoration: solid;
+}
 .sort-numerical a.desc:after {
     content: "\e154";
 }
@@ -98,3 +107,125 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+.adress {
+
+    padding-left: 200px;
+    font-size: 35px;
+}
+
+.fone {
+
+     padding-left: 300px;
+     font-size: 25px;
+<<<<<<< HEAD
+     color: #516171;
+ }
+.worck{
+
+    padding-left: 330px;
+    font-size: 15px;
+    color: #000000;
+=======
+     color: #d58512;
+ }
+.worck{
+
+    padding-left: 130px;
+    font-size: 15px;
+    color: deepskyblue;
+>>>>>>> origin/master
+}
+.queue{
+
+    padding-left: 340px;
+    font-size: 15px;
+<<<<<<< HEAD
+    color: #000000;
+}
+
+.alert-success{
+    background-color: #f4f3cd;
+    color: #000000;
+=======
+    color: red;
+}
+
+.alert-success{
+    background-color: #F7ECEE;
+    color: #3C76B6;
+>>>>>>> origin/master
+}
+
+.badge
+{
+<<<<<<< HEAD
+    background-color: #9ba7aa;
+=======
+    background-color: #76A;
+>>>>>>> origin/master
+}
+
+.lera_2
+{
+<<<<<<< HEAD
+    border: 2px solid #f9e5c5;
+    background-color: #F0E7F0;
+}
+.breadcrumb {
+    background-color: #f4f3cd;
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+#header img {
+    width: 1007px;
+}
+
+#header {
+    height: 368px;
+}
+
+
+#header .blue {
+    color: #D01818;
+    background: url("../images/header3.png") no-repeat;
+    margin-left:55px;
+    height:155px;
+    margin: 0 auto;
+    width:1007px;
+    font-style:italic;
+    margin-top: -250px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.myimage{
+    border: 2px solid #d58512
+
+}
+
+.btn-success
+{
+    background-color: #9ba7aa;
+}
+
+.btn-danger
+{
+    background-color: #9ba7aa;
+}
+
+.kolvo{
+    font-size: 20px;
+}
+=======
+    border: 2px solid #EDD4F9;
+    background-color: #F0E7F0;
+}
+.breadcrumb {
+    background-color: #F4DCDC;
+}
+>>>>>>> origin/master

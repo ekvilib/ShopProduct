@@ -13,10 +13,18 @@ $this->title = 'Категории';
 					<h2><?php echo $product->name; ?></h2>
 					<div class="badge badge-inverse">Стоимость: <?php echo $product->price; ?></div>
                     <?php echo $product->description; ?>
+                    <img src="<?php echo $product->img; ?>" />
 
-                    <div>
+<<<<<<< HEAD
+                    <img src="<?php echo $product->img; ?>" />
+
+=======
+>>>>>>> origin/master
+                    <div class="lera_2">
                         <?php foreach($product->attributes as $attribute): ?>
+                        <div class="">
                             <?php echo $attribute->name; ?>: <?php echo $attribute->value; ?>
+                        </div>
                         <?php endforeach; ?>
                     </div>
 

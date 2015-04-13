@@ -72,9 +72,13 @@ class BasketProduct extends \yii\db\ActiveRecord
 		return Product::findOne($this->product_id);
 	}
 
+
     public function getUserName()
     {
-      /*  return User::findOne($this->user_id)->username;  и то что ниже равны нахуй!!!!!!*/
+    /*
+        $this->getUserName();
+        $this->userName;
+        return User::findOne($this->user_id)->username;  и то что ниже равны нахуй!!!!!!*/
         return User::find()
             ->where([
                 'id' => $this->user_id
@@ -90,8 +94,5 @@ class BasketProduct extends \yii\db\ActiveRecord
         return Product::findOne($this->product_id)->name;
     }
 
-    public function ads()
-    {
-        return 'ss';
-    }
+
 }

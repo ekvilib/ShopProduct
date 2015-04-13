@@ -32,7 +32,8 @@ class Product extends \yii\db\ActiveRecord
             [['category_id'], 'integer'],
             [['description'], 'string'],
             [['price'], 'number'],
-            [['name'], 'string', 'max' => 128]
+            [['name'], 'string', 'max' => 128],
+            [['img'], 'string', 'max' => 64]
         ];
     }
 
@@ -47,6 +48,7 @@ class Product extends \yii\db\ActiveRecord
             'name' => 'Наименование продукта',
             'description' => 'Описание',
             'price' => 'Цена',
+            'img' => 'Картинка',
         ];
     }
 

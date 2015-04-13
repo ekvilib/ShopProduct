@@ -14,12 +14,16 @@ $this->title = 'Корзина';
 			<div class="col-md-12">
 				<div class="alert alert-success">
 					<h2><?php echo $basketProduct->product->name; ?></h2>
+                    <img src="<?php echo $basketProduct->product->img; ?>" />
 					<div class="badge badge-inverse">Стоимость итого: <?php echo $basketProduct->product->price * $basketProduct->count; ?></div>
 					<?php echo $basketProduct->product->description; ?>
-					<div>Количество: <?php echo $basketProduct->count; ?></div>
-                    <?= Html::a('Добавить', ['basket/add', 'id' => $basketProduct->id], ['class' => 'btn btn-success']) ?>
-                    <?= Html::a('Убрать', ['basket/remove', 'id' => $basketProduct->id], ['class' => 'btn btn-danger']) ?>
-				</div>
+					<div>
+                        <span class="kolvo"> Количество: <?php echo $basketProduct->count; ?></span>
+                        <?= Html::a('+', ['basket/add', 'id' => $basketProduct->id], ['class' => 'btn btn-success']) ?>
+                        <?= Html::a('-', ['basket/remove', 'id' => $basketProduct->id], ['class' => 'btn btn-danger']) ?>
+
+                    </div>
+                    </div>
 			</div>
 		</div>
 	<?php endforeach; ?>
