@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+$this->title = 'Ekv-shop';
 ?>
 <div class="site-index">
 
@@ -8,7 +8,7 @@ $this->title = 'My Yii Application';
         <div class="col-md-4">
             <?php foreach($categories as $category): ?>
                 <?php if($category->parent_id == null): ?>
-                    <div class="row" style="padding-top: 30px;">
+                    <div class="row rowcategory" >
                         <div class="col-md-12">
                             <a onClick="subcategory(<?php echo $category->id; ?>)"><h4><?php echo $category->name; ?></h4></a>
 
@@ -28,10 +28,10 @@ $this->title = 'My Yii Application';
         <div class="col-md-6">
             <div class="jumbotron">
                 <div style="height: 200px;">
-                    <h1>Интернет-магазин "КОРЗИНКА"!</h1>
+                    <h1>Строй-долгострой</h1>
                 </div>
 
-                <p class="lead">Добро пожаловать к нам в интернет-магазин!</p>
+                <p class="lead"> У нас вы найдете материалы для любой стройки </p>
             </div>
         </div>
     </div>

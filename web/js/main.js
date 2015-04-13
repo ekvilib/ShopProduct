@@ -3,26 +3,27 @@ $(document).ready(function() {
 
     runIt();
 
-
+    stime();
 
     function runIt() {
         $h.animate({
             opacity:"0"
-        }, 1800, function() {
+        }, 18001, function() {
             $h.removeAttr("style");
             runIt();
+            //stime();
         });
     }
 
     function stime() {
         var dt = new Date();
-        var times = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+        var times = dt.getHours() + ":" + dt.getMinutes() ;
         $('#time').html(times);
 
-        stime();
+
     }
 
-    stime();
+
 
 });
 

@@ -2,7 +2,7 @@
 
 // NOTE: Make sure this file is not accessible when deployed to production
 if (!in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1'])) {
-    die('You are not allowed to access this file.');
+    die('У вас нет прав для открытия этого файла.');
 }
 
 defined('YII_DEBUG') or define('YII_DEBUG', true);

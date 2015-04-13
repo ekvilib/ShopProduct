@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Category;
+use app\models\Orders;
 
 /**
- * CategorySearch represents the model behind the search form about `app\models\Category`.
+ * OrdersSearch represents the model behind the search form about `app\models\Orders`.
  */
-class CategorySearch extends Category
+class OrdersSearch extends Orders
 {
     /**
      * @inheritdoc
@@ -18,8 +18,7 @@ class CategorySearch extends Category
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['name', 'parent_id'], 'safe'],
+            [['id', 'product_id', 'count'], 'integer'],
         ];
     }
 
@@ -41,7 +40,7 @@ class CategorySearch extends Category
      */
     public function search($params)
     {
-        $query = Category::find();
+        $query = Orders::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -57,10 +56,11 @@ class CategorySearch extends Category
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'parent_id' => $this->parent_id,
+            'product_id' => $this->product_id,
+            'count' => $this->count,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->orderBy('count desc');
 
         return $dataProvider;
     }

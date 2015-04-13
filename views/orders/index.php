@@ -4,38 +4,44 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\CategorySearch */
+/* @var $searchModel app\models\OrdersSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Категории';
+$this->title = 'Заказы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="category-index">
+<div class="orders-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Добавить категорию', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить заказ', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
-        'layout'=>"{items}{pager}",
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+
             [
+                'label' => 'ID',
+                'attribute' => 'id',
                 'filter' => '',
-                'attribute' => 'parent_id',
+            ],
+            [
+                'label' => 'Продукт',
                 'value' => function ($model) {
-                    return $model->parent ? $model->parent : 'Главная категория';
+                    return $model->product->name;
                 },
             ],
-            'name',
-
+            [
+                'label' => 'Количество',
+                'attribute' => 'count',
+                'filter' => '',
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

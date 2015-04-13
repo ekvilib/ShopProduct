@@ -20,20 +20,32 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body background="../images/46.png">
+<body background="/images/46.png">
 
-<h5><div id="time"></div></h5>
+
+
+<div id="header">
+    <img src="/images/header.png" alt="Шапка" />
+    <div>
+        <p class="blue"><br/><br/><br/> <br/> Время работы:  <br/> с 08:00 до 20:00</p>
+        <p style="text-align: center; position: relative; top: -10px;" id="time"></p>
+    </div>
+
+</div>
+
+
 
 <?php $this->beginBody() ?>
+
     <div class="wrap">
         <?php
-            NavBar::begin([
-                'brandLabel' => 'Корзинка',
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'myimage',
-                ],
-            ]);
+        NavBar::begin([
+
+            'brandUrl' => Yii::$app->homeUrl,
+            'options' => [
+                'class' => 'myimage',
+            ],
+        ]);
 
 	        $items = [
 		        ['label' => 'Главная', 'url' => ['/site/index']],
@@ -48,17 +60,18 @@ AppAsset::register($this);
 
             if(!Yii::$app->user->isGuest && Yii::$app->user->identity->is_admin)
             {
-                $items[] = ['label' => 'Редактироваль пользователей', 'url' => ['/admin-user']];
-                $items[] = ['label' => 'Редактировать карзины', 'url' => ['/admin-basket-product']];
-                $items[] = ['label' => 'Редактировать категории', 'url' => ['/admin-category']];
-                $items[] = ['label' => 'Редактировать продукты', 'url' => ['/admin-product']];
-                $items[] = ['label' => 'Редактировать атрибуты продуктов', 'url' => ['/admin-product-attribute']];
-                $items[] = ['label' => 'Редактировать типы атрибутов', 'url' => ['/admin-product-attribute-type']];
+                $items[] = ['label' => 'Заказы', 'url' => ['/orders']];
+                $items[] = ['label' => 'Пользователи', 'url' => ['/admin-user']];
+                $items[] = ['label' => 'Корзина', 'url' => ['/admin-basket-product']];
+                $items[] = ['label' => 'Категории', 'url' => ['/admin-category']];
+                $items[] = ['label' => 'Товары', 'url' => ['/admin-product']];
+                $items[] = ['label' => 'Данные о товарах', 'url' => ['/admin-product-attribute']];
+                $items[] = ['label' => 'Типы данных', 'url' => ['/admin-product-attribute-type']];
             }
 
             if(!Yii::$app->user->isGuest)
             {
-                $items[] = ['label' => 'Корзина', 'url' => ['/basket']];
+                $items[] = ['label' => 'Моя Корзина', 'url' => ['/basket']];
             }
         else
         {
@@ -87,8 +100,8 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; Корзинка <?= date('Y') ?></p>
-            <p class="pull-right"><?= 'Made in china' ?></p>
+            <p class="pull-left">&copy; Строй-долгострой <?= date('Y') ?></p>
+            <p class="pull-right"><?= 'by Ekvilib' ?></p>
         </div>
     </footer>
 
