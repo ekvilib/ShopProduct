@@ -118,6 +118,7 @@ a{
 
      padding-left: 300px;
      font-size: 25px;
+<<<<<<< HEAD
      color: #516171;
  }
 .worck{
@@ -125,26 +126,49 @@ a{
     padding-left: 330px;
     font-size: 15px;
     color: #000000;
+=======
+     color: #d58512;
+ }
+.worck{
+
+    padding-left: 130px;
+    font-size: 15px;
+    color: deepskyblue;
+>>>>>>> origin/master
 }
 .queue{
 
     padding-left: 340px;
     font-size: 15px;
+<<<<<<< HEAD
     color: #000000;
 }
 
 .alert-success{
     background-color: #f4f3cd;
     color: #000000;
+=======
+    color: red;
+}
+
+.alert-success{
+    background-color: #F7ECEE;
+    color: #3C76B6;
+>>>>>>> origin/master
 }
 
 .badge
 {
+<<<<<<< HEAD
     background-color: #9ba7aa;
+=======
+    background-color: #76A;
+>>>>>>> origin/master
 }
 
 .lera_2
 {
+<<<<<<< HEAD
     border: 2px solid #f9e5c5;
     background-color: #F0E7F0;
 }
@@ -197,3 +221,11 @@ a{
 .kolvo{
     font-size: 20px;
 }
+=======
+    border: 2px solid #EDD4F9;
+    background-color: #F0E7F0;
+}
+.breadcrumb {
+    background-color: #F4DCDC;
+}
+>>>>>>> origin/master

@@ -15,8 +15,11 @@ $this->title = 'Категории';
                     <?php echo $product->description; ?>
                     <img src="<?php echo $product->img; ?>" />
 
+<<<<<<< HEAD
                     <img src="<?php echo $product->img; ?>" />
 
+=======
+>>>>>>> origin/master
                     <div class="lera_2">
                         <?php foreach($product->attributes as $attribute): ?>
                         <div class="">
